@@ -55,11 +55,11 @@ cp -fr vscode/key-bindings.json $HOME/.config/Code/User
 
 
 # install docker
-sudo dnf install -y  https://desktop.docker.com/linux/main/amd64/docker-desktop-4.11.0-x86_64.rpm?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64
+sudo dnf install -y  docker/docker-desktop-x86_64.rpm
 
 # install nodejs
 sudo dnf install nodejs
-npm install -G jest
+npm install -g jest
 
 # install GoLang
 sudo dnf install golang
@@ -69,11 +69,10 @@ source $HOME/.bashrc
 
 # install python 3
 sudo dnf install python3
-1
-
 
 # install MySQL
-sudo dnf install -y https://dev.mysql.com/get/mysql80-community-release-fc36-1.noarch.rpm
+suuudo dnf install mysql-community-server
+sudo grep 'dettol' /var/log/mysqld.log
 sudo mysql_secure_installation
 
 # install PostgreSQL
@@ -93,10 +92,6 @@ sudo firewall-cmd --permanent --add-service=https
 # install nginx
 sudo dnf install nginx
 
-# install xamp
-curl https://www.apachefriends.org/xampp-files/8.0.6/xampp-linux-x64-8.0.6-0-installer.run -o xampp/xampp-linux-x86.run
-chmod a+x xampp/xampp-linux-x86.run
-
 # install chromium
 sudo dnf install chromium
 
@@ -106,21 +101,7 @@ sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 sudo dnf install -y brave-browser
 
 #install PenPot
-wget https://raw.githubusercontent.com/penpot/penpot/main/docker/images/docker-compose.yaml
-wget https://raw.githubusercontent.com/penpot/penpot/main/docker/images/config.env
 docker compose -p penpot -f docker-compose.yaml up -d
 
 #install krita
 sudo dnf install -y krita
-
-#install blender
-sudo dnf install gcc gcc-c++ git subversion make cmake mesa-libGL-devel mesa-libEGL-devel libX11-devel libXxf86vm-devel libXi-devel libXcursor-devel libXrandr-devel libXinerama-devel libstdc++-static
-sudo dnf install wayland-devel wayland-protocols-devel libxkbcommon-devel dbus-devel kernel-headers
-
-mkdir ~/blender-git
-cd ~/blender-git
-git clone https://git.blender.org/blender.git
-
-cd ~/blender-git/blender
-make update
-make
