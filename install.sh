@@ -1,13 +1,14 @@
 # GIT
-sudo dnf -y install git
-git config --global user.name "Fadlan A"
-git config --global user.email "fadlanerman6@gmail.com"
+#sudo dnf -y install git
+#git config --global user.name "Fadlan A"
+#git config --global user.email "fadlanerman6@gmail.com"
 
+# Jtebrains Mono
+#unzip jetbrains-mono/JetBrainsMono-2.242.zip -d ~/.local/share/fonts
+#fc-cache-f-v
 
-# Jetbrains Mono
-unzip jetbrains-mono -d ~/.local/share/fonts
-fc-cache-f-v
-
+#failed:
+#mysql, mongodb, postgresql, docker, httpd
 
 # VSCode
 #install vscode
@@ -25,27 +26,53 @@ EOF
 dnf install code
 #install extensions
 pkglist=(
-	Orta.vscode-jest
-	PKief.material-icon-theme
-	VisualStudioExptTeam.vscodeintellicode
-	bradlc.vscode-tailwindcss
-	chris-noring.node-snippets
-	dbaeumer.vscode-eslint
-	ecmel.vscode-html-css
-	esbenp.prettier-vscode
-	formulahendry.auto-rename-tag
-	jobe451.lorem-whatever
-	ms-vscode.js-debug-nightly
-	rangav.vscode-thunder-client
-	ritwickdey.LiveServer
-	waderyan.nodejs-extension-pack
-	moalamri.inline-fold
-	pnp.polacode
-	golang.Go
-	golang.go-nightly
-	ms-python.python
-	ms-toolsai.jupyter
-	ms-vscode.vscode-typescript-next
+	aaron-bond.better-comments-3.0.2
+	bmewburn.vscode-intelephense-client-1.8.2
+	bradlc.vscode-tailwindcss-0.9.1
+	chakrounanas.turbo-console-log-2.5.6
+	chris-noring.node-snippets-1.3.3
+	christian-kohler.npm-intellisense-1.4.2
+	christian-kohler.path-intellisense-2.8.1
+	dbaeumer.vscode-eslint-2.2.6
+	dsznajder.es7-react-js-snippets-4.4.3
+	eamodio.gitlens-13.0.3
+	ecmel.vscode-html-css-1.13.1
+	eg2.vscode-npm-script-0.3.29
+	esbenp.prettier-vscode-9.9.0
+	formulahendry.auto-rename-tag-0.1.10
+	golang.go-0.35.2
+	golang.go-nightly-2022.10.2500
+	jasonnutter.search-node-modules-1.3.0
+	jobe451.lorem-whatever-1.0.2
+	ms-azuretools.vscode-docker-1.22.2
+	ms-ossdata.vscode-postgresql-0.3.0
+	ms-python.python-2022.16.1
+	ms-python.vscode-pylance-2022.10.40
+	ms-toolsai.jupyter-2022.9.1202862440
+	ms-toolsai.jupyter-keymap-1.0.0
+	ms-toolsai.jupyter-renderers-1.0.10
+	ms-toolsai.vscode-jupyter-cell-tags-0.1.6
+	ms-toolsai.vscode-jupyter-slideshow-0.1.5
+	ms-vscode.js-debug-nightly-2022.10.1317
+	ms-vscode-remote.remote-containers-0.255.4
+	ms-vscode.vscode-typescript-next-4.9.20221028
+	ms-vsliveshare.vsliveshare-1.0.5750
+	oderwat.indent-rainbow-8.3.1
+	orta.vscode-jest-4.6.0
+	pkief.material-icon-theme-4.21.0
+	pnp.polacode-0.3.4
+	rangav.vscode-thunder-client-1.20.1
+	ritwickdey.liveserver-5.7.9
+	skyran.js-jsx-snippets-11.0.0
+	stateful.stable-0.8.0
+	vincaslt.highlight-matching-tag-0.10.1
+	visualstudioexptteam.intellicode-api-usage-examples-0.2.6
+	visualstudioexptteam.vscodeintellicode-1.2.29
+	waderyan.nodejs-extension-pack-0.1.9
+	wix.vscode-import-cost-3.3.0
+	xabikos.javascriptsnippets-1.8.0
+	xdebug.php-debug-1.29.0
+	yzane.markdown-pdf-1.4.4
 )
 for i in ${pkglist[@]}; do
   code --install-extension $i
@@ -56,25 +83,21 @@ cp -fr vscode/key-bindings.json $HOME/.config/Code/User
 
 
 # install docker
-sudo dnf install -y  https://desktop.docker.com/linux/main/amd64/docker-desktop-4.11.0-x86_64.rpm?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64
+sudo dnf install -y  docker/docker-desktop-x86_64.rpm
 
 # install nodejs
-sudo dnf install nodejs
-npm install -G jest
+sudo dnf install -y nodejs
+npm install -g jest
 
 # install GoLang
-sudo dnf install golang
+sudo dnf install -y golang
 mkdir -p $HOME/go
 echo 'export GOPATH=$HOME/go' >> $HOME/.bashrc
 source $HOME/.bashrc
 
-# install python 3
-sudo dnf install python3
-1
-
-
 # install MySQL
-sudo dnf install -y https://dev.mysql.com/get/mysql80-community-release-fc36-1.noarch.rpm
+sudo dnf install -y mysql-community-server
+sudo grep 'dettol' /var/log/mysqld.log
 sudo mysql_secure_installation
 
 # install PostgreSQL
@@ -85,21 +108,17 @@ sudo systemctl enable postgresql-14
 sudo systemctl start postgresql-14
 
 # install MongoDB
-sudo dnf install mongodb mongodb-server
+sudo dnf install -y mongodb mongodb-server
 
 # install apache
 sudo dnf install -y httpd
 sudo firewall-cmd --permanent --add-service=https
 
 # install nginx
-sudo dnf install nginx
-
-# install xamp
-curl https://www.apachefriends.org/xampp-files/8.0.6/xampp-linux-x64-8.0.6-0-installer.run -o xampp/xampp-linux-x86.run
-chmod a+x xampp/xampp-linux-x86.run
+sudo dnf install -y nginx
 
 # install chromium
-sudo dnf install chromium
+sudo dnf install -y chromium
 
 # install brave
 sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
@@ -107,21 +126,7 @@ sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 sudo dnf install -y brave-browser
 
 #install PenPot
-wget https://raw.githubusercontent.com/penpot/penpot/main/docker/images/docker-compose.yaml
-wget https://raw.githubusercontent.com/penpot/penpot/main/docker/images/config.env
 docker compose -p penpot -f docker-compose.yaml up -d
 
 #install krita
 sudo dnf install -y krita
-
-#install blender
-sudo dnf install gcc gcc-c++ git subversion make cmake mesa-libGL-devel mesa-libEGL-devel libX11-devel libXxf86vm-devel libXi-devel libXcursor-devel libXrandr-devel libXinerama-devel libstdc++-static
-sudo dnf install wayland-devel wayland-protocols-devel libxkbcommon-devel dbus-devel kernel-headers
-
-mkdir ~/blender-git
-cd ~/blender-git
-git clone https://git.blender.org/blender.git
-
-cd ~/blender-git/blender
-make update
-make
