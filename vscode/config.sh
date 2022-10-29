@@ -1,3 +1,11 @@
+# install settings and keybidings
+sudo cp keybindings.json $HOME.config/Code/User
+sudo cp settings.json $HOME.config/Code/User
+
+# install custom theme (monokai dimmed modified)
+sudo cp dimmed-monokai-color-theme.json /usr/share/code/resources/app/extensions
+
+# install extension
 pkglist=(
 	aaron-bond.better-comments-3.0.2
 	bmewburn.vscode-intelephense-client-1.8.2
@@ -46,6 +54,7 @@ pkglist=(
 	xabikos.javascriptsnippets-1.8.0
 	xdebug.php-debug-1.29.0
 	yzane.markdown-pdf-1.4.4
+	albert.TabOut
 )
 for i in ${pkglist[@]}; do
   code --install-extension $i
