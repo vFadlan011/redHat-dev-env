@@ -15,7 +15,6 @@ pkglist=(
 	christian-kohler.npm-intellisense-1.4.2
 	christian-kohler.path-intellisense-2.8.1
 	dbaeumer.vscode-eslint-2.2.6
-	dsznajder.es7-react-js-snippets-4.4.3
 	eamodio.gitlens-13.0.3
 	ecmel.vscode-html-css-1.13.1
 	eg2.vscode-npm-script-0.3.29
