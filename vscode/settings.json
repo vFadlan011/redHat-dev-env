@@ -2,6 +2,8 @@
   "workbench.colorTheme": "Monokai Dimmed",
   "workbench.iconTheme": "material-icon-theme",
   "editor.linkedEditing": true,
+
+  // code formatting
   "prettier.tabWidth": 2,
   "editor.formatOnSave": true,
   "[json]": {
@@ -29,20 +31,60 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.formatOnType": true
+  },
+
+  // font family
   "editor.fontFamily": "Jetbrains Mono",
   "editor.fontLigatures": true,
+  "terminal.integrated.fontFamily": "Jetbrains Mono",
+
+  // other
   "editor.acceptSuggestionOnEnter": "off",
   "editor.stickyScroll.enabled": true,
   "css.lint.propertyIgnoredDueToDisplay": "ignore",
   "css.lint.unknownAtRules": "ignore",
   "npm.keybindingsChangedWarningShown": true,
-  "terminal.integrated.fontFamily": "Jetbrains Mono",
   "editor.tabSize": 2,
-  "reactSnippets.settings.importReactOnTop": false,
-  "[go]": {
-    "editor.defaultFormatter": "golang.go",
-    "editor.formatOnType": true
-  },
   "markdown-pdf.executablePath": "/usr/bin/chromium-browser",
+
+  // TODO HIGHLIGHTER
+  "todohighlight.keywords": [
+    "DEBUG:",
+    "REVIEW:",
+    {
+      "text": "HACK:",
+      "color": "red",
+      "backgroundColor": "black",
+      "isWholeLine": false
+    },
+    {
+      "text": "TODO:",
+      "color": "#1e1e1e",
+      "backgroundColor": "orange",
+      "isWholeLine": false
+    },
+    {
+      "text": "FIXME:",
+      "color": "white",
+      "backgroundColor": "#f06292",
+      "isWholeLine": false
+    },
+    {
+      "text": "REFACTOR:",
+      "color": "#1e1e1e",
+      "backgroundColor": "rgb(141,211,37)",
+      "isWholeLine": false
+    },
+    {
+      "text": "TODO[DONE]:",
+      "color": "#1e1e1e",
+      "backgroundColor": "rgb(141,211,37)",
+      "isWholeLine": false
+    }
+  ],
+
   "window.zoomLevel": -1
 }

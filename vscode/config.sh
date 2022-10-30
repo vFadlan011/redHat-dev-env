@@ -52,6 +52,7 @@ pkglist=(
 	xdebug.php-debug-1.29.0
 	yzane.markdown-pdf-1.4.4
 	albert.TabOut
+	wayou.vscode-todo-highlight
 )
 for i in ${pkglist[@]}; do
   code --install-extension $i

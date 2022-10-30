@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      code {
+        display: block;
+        font-family: "Jetbrains Mono";
+      }
+      .highlight-dark {
+        color: #c5c8c6;
+        margin: 16px;
+        padding: 16px;
+        background-color: #1e1e1e;
+        border-radius: 5px;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+      }
+
+      span {
+        display: block;
+        width: fit-content;
+      }
+
+      .default,
+      .debug,
+      .review {
+        color: #2196f3;
+        background-color: #ffeb3b;
+      }
+      .refactor,
+      .todo-done {
+        color: #1e1e1e;
+        background-color: rgb(141, 211, 37);
+      }
+      .hack {
+        color: red;
+        margin: 2px;
+        border: 1px solid red;
+        background-color: black;
+      }
+      .todo {
+        color: #1e1e1e;
+        background-color: orange;
+      }
+      .fixme {
+        color: white;
+        background-color: #f06292;
+      }
+    </style>
+  </head>
+  <body>
+    <code class="highlight-dark">
+      <span class="default">ANY-KEY:</span>
+      <span class="debug">DEBUG:</span>
+      <span class="review">REVIEW:</span>
+      <span class="refactor">REFACTOR:</span>
+      <span class="hack">HACK:</span>
+      <span class="todo">TODO:</span>
+      <span class="todo-done">TODO[DONE]:</span>
+      <span class="fixme">FIXME:</span>
+    </code>
+  </body>
+</html>
