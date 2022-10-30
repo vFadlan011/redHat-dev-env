@@ -42,10 +42,8 @@ pkglist=(
 	orta.vscode-jest-4.6.0
 	pkief.material-icon-theme-4.21.0
 	pnp.polacode-0.3.4
-	rangav.vscode-thunder-client-1.20.1
 	ritwickdey.liveserver-5.7.9
 	skyran.js-jsx-snippets-11.0.0
-	stateful.stable-0.8.0
 	vincaslt.highlight-matching-tag-0.10.1
 	visualstudioexptteam.intellicode-api-usage-examples-0.2.6
 	visualstudioexptteam.vscodeintellicode-1.2.29
