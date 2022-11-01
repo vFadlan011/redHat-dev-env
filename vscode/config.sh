@@ -57,6 +57,3 @@ pkglist=(
 for i in ${pkglist[@]}; do
   code --install-extension $i
 done
-#install settings.json
-cp -fr vscode/settings.json $HOME/.config/Code/User
-cp -fr vscode/key-bindings.json $HOME/.config/Code/User

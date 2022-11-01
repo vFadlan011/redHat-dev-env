@@ -10,5 +10,4 @@ gpgkey=https://packages.microsoft.com/keys/microsoft.asc
 EOF
 #install vscode
 sudo dnf install code
-./install-theme-custom.sh
-./install-settings.sh
+
