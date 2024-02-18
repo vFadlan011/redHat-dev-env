@@ -23,6 +23,7 @@ set pkglist=(
 	xabikos.javascriptsnippets
 	xdebug.php-debug
 	albert.TabOut
+	pkief.material-icon-theme-4.21.0
 )
 
 for %%i in (%pkglist%) do (
