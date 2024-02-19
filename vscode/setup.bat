@@ -2,8 +2,6 @@
 
 curl -o keybindings.json https://raw.githubusercontent.com/vFadlan011/redHat-dev-env/main/vscode/keybindings.json
 curl -o settings.json https://raw.githubusercontent.com/vFadlan011/redHat-dev-env/main/vscode/settings.json
-curl -o JetbrainsMono-2.zip https://download-cdn.jetbrains.com/fonts/JetBrainsMono-2.304.zip
-curl -o jquery-3.7.js https://code.jquery.com/jquery-3.7.1.min.js
 
 set pkglist=(
 	shufo.vscode-blade-formatter
